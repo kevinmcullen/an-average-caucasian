@@ -25,8 +25,23 @@
   
 $(document).ready(function () {
     
-    var showMenu = function () {
-//        event.stopPropagation();
+  $(window).scroll(function() {
+
+    if ($(this).scrollTop()>10)
+     {
+        $('.main-nav ul').hide();
+     }
+    /*else
+     {
+      $('.main-nav ul').show();
+     }*/
+ });
+  
+  
+  
+  
+    var showMenu = function (e) {
+        e.stopPropagation();
 //        e.preventDefault();
         $(this).closest("nav").find("ul.show-nav").slideToggle("slow"); };
     var hideMenu = function () {
