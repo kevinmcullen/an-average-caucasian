@@ -1,5 +1,21 @@
 /* main yellow: #ffdd15 */
 
+/********************************************
+ANIMATION KEYFRAMES
+********************************************/
+
+@keyframes pulse {
+    0% {
+      
+    }
+    50% {
+      opacity: .5;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+
 
 /********************************************
 BASE STYLES
@@ -7,6 +23,10 @@ BASE STYLES
 
 * {
   box-sizing: border-box;
+}
+
+* > p {
+  margin-bottom: 2em;
 }
 
 
@@ -38,10 +58,11 @@ h5,
 h6 {
   font-family: 'bebas_neuebold', 'Arial', sans-serif;
   text-align: center;
+  margin-bottom: .4em;
 }
 
 h1 {
-  font-size: 6em;
+  font-size: 3em;
 }
 
 h2 {
@@ -94,8 +115,8 @@ header > * {
 }
 
 .main-logo {
-  width: 70%;
-  float: left;
+  width: 100%
+/*  float: left;*/
 }
 
 .main-logo img {
@@ -109,11 +130,15 @@ header > * {
 }
 
 .main-nav {
-  margin: 3em auto 0;
+  margin: .2em auto 1em;
   text-align: center;
-  float: right;
+/*  float: right;*/
 /*  display: none;*/
-  width: 30%;
+  width: 80%;
+  background-color: #ffdd15;
+  padding-top: .05em;
+  border-radius: .4em;
+  
    
   
 }
@@ -122,37 +147,38 @@ header > * {
   display: none;
 /*  background-color: #000;*/
   text-align: center;
-/*  padding: 1em;*/
+  padding: .6em;
 /*  border-radius: 20%;*/
+/*  width: 100%;*/
 }
 
 .main-nav ul li a {
-  font-size: 1.2em;
+  font-size: 1em;
   padding: .2em;
+  transition: all .4s ease-in-out;
+}
+
+.main-nav ul li a:hover {
+  color: #fff;
 }
 
 .show-nav {
-  position: absolute;
-  right: 10%;
-  background-color: rgba(255, 221, 21, .5);
+  position: relative;
+/*  right: 10%;*/
+/*  background-color: rgba(255, 221, 21, .5);*/
+  background-color: #ffdd15;
   border-radius: 5%;
+  margin-bottom: 1em;
+/*  width: 100%;*/
   
 }
 
 .show-nav li a {
   color: #000;
   padding: .4em 0;
-  display: block;
+
 }
 
-/*
-.menu-toggle {
-  background-color: black;
-  width: 1em;
-  height: .2em;
-  
-}
-*/
 
 a.menu-toggle {
   vertical-align: middle;
@@ -161,12 +187,29 @@ a.menu-toggle {
 
 .toggle-bar {
   background-color: #000;
+/*  width: 0;
+	height: 0;
+	border-left: 15px solid transparent;
+	border-right: 15px solid transparent;
+	border-top: 10px solid #000;*/
   width: 2.5em;
-  height: .3em;
+  height: .25em;
   border-radius: .4em;
-  margin: .2em 0 .2em auto;
+  margin: .4em auto;
+/*  -webkit-animation: pulse 2s infinite;*/
+  
 }
 
+/*.toggle-bar:active {
+  background-color: #000;
+  width: 0;
+	height: 0;
+	border-left: 15px solid transparent;
+	border-right: 15px solid transparent;
+	border-top: 10px solid #ffdd15;
+
+  margin: .4em auto;
+}*/
 
 
 /********************************************
@@ -174,7 +217,7 @@ WRAPPER
 ********************************************/
 .container {
   width: 80%;
-  margin: 0 auto;
+  margin: 0 auto 2em;
 }
 
 .container > div {

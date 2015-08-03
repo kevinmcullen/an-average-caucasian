@@ -34,8 +34,11 @@ $(document).ready(function () {
 //        event.preventDefault();
         $(this).closest("nav").find("ul.show-nav").slideToggle("slow");        
     };
+
    // jQuery methods go here...
     $(".main-nav").on("click", ".menu-toggle", showMenu);
+    
+    
 //    $(".main-nav").on("click", ".menu-toggle", hideMenu);    
 //    $(".contactForm").on("focusin", "textarea", showError);
 //    $(".contactForm").on("focusout", "textarea", hideError);
