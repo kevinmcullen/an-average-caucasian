@@ -43,6 +43,8 @@ html {
   background-color: #ffeb73;
 }
 
+
+
 body {
   width: 100%;
   max-width: 1000px;
@@ -217,17 +219,54 @@ WRAPPER
 ********************************************/
 .container {
   width: 80%;
-  margin: 0 auto 2em;
+  margin: 0 auto;
+  padding-bottom: 1em;
 }
 
 .container > div {
   margin: 0 auto;
 }
 
+.wrapper {
+  background-color: #ffeb73;
+  background-color: rgba(255, 221, 21, .1);
+  padding-top: 3em;
+}
+
 
 /********************************************
-BASE STYLES
+FOOTER
 ********************************************/
+
+footer {
+  padding-top: 1em;
+}
+
+.footer-logo.footer-nav,
+.social-icons.copyright {
+  width: 50%;
+  margin: .2em auto .8em;
+  text-align: center;
+  display: block;
+ }
+
+.footer-logo.footer-nav img {
+  margin-bottom: .4em;
+}
+
+.social-icons.copyright ul li {
+  display: inline;
+}
+.social-icons.copyright img {
+  width: 15%;
+  margin-bottom: .4em;
+}
+
+.social-icons.copyright p {
+  font-size: .4em;
+  margin-bottom: 0;
+}
+ 
 
 
 
