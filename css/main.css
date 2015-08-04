@@ -114,6 +114,19 @@ a:hover {
 HEADER
 ********************************************/
 
+
+header {
+  background-color: #fff;
+}
+
+header.fixed {
+  height: 4em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
 header > * {
   margin: 0 2%;
 }
@@ -133,11 +146,28 @@ header > * {
   padding: .4em
 }
 
+.main-logo.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  float: left;
+  width: 40%;
+/*  max-height: 4em;*/
+  z-index: 1;
+/*  padding: .2em;*/
+/*  background-color: #fff;*/
+}
+
+.main-logo.fixed img {
+  max-width: 160px;
+}
+
+
 .main-nav {
-  margin: .2em auto 1em;
+  margin: .2em auto .4em;
   text-align: center;
 /*  float: right;*/
-/*  display: none;*/
+/*  display: none; */
   width: 80%;
   background-color: #ffdd15;
   padding-top: .05em;
@@ -159,19 +189,41 @@ header > * {
 .main-nav ul li a {
   font-size: 1em;
   padding: .2em;
-  transition: all .4s ease-in-out;
+  transition: all .1s ease-in;
 }
 
 .main-nav ul li a:hover {
   color: #fff;
 }
 
+.main-nav.fixed {
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  border-radius: 0;
+  margin: 0 auto;
+  padding: 1.2em 0 0;
+/*  right: 10%;*/
+}
+
+.main-nav.fixed a div {
+  margin: 0 .6em .2em  auto;
+  
+}
+
+.main-nav.fixed ul {
+  text-align: right;
+}
+
+
 .show-nav {
   position: relative;
 /*  right: 10%;*/
-/*  background-color: rgba(255, 221, 21, .5);*/
-  background-color: #ffdd15;
-  margin-bottom: 1em;
+  background-color: rgba(255, 221, 21, 1);
+/*  background-color: #ffdd15;*/
+/*  margin-bottom: .4em;*/
 /*  width: 100%;*/
   
 }
@@ -185,7 +237,7 @@ header > * {
 
 a.menu-toggle {
   vertical-align: middle;
-  background-color: #ffdd15;
+/*  background-color: #ffdd15;*/
 }
 
 .toggle-bar {
@@ -198,9 +250,15 @@ a.menu-toggle {
   width: 2.5em;
   height: .25em;
   border-radius: .4em;
-  margin: .4em auto;
+  margin: 0 auto .2em;
+  transition: all .1s ease-in;
+  
 /*  -webkit-animation: pulse 2s infinite;*/
   
+}
+
+.menu-toggle:hover > div {
+  margin: 0 auto .4em;
 }
 
 /*.toggle-bar:active {

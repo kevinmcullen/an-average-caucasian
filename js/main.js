@@ -25,23 +25,32 @@
   
 $(document).ready(function () {
     
-  $(window).scroll(function() {
-
+  $(window).scroll(function(event) {
+    event.preventDefault();
+    event.stopPropagation();
+    
     if ($(this).scrollTop()>10)
      {
         $('.main-nav ul').hide();
+        $('.main-nav').addClass('fixed');
+        $('.main-logo').addClass('fixed');
+       $('header').addClass('fixed');
      }
-    /*else
+    else
      {
       $('.main-nav ul').show();
-     }*/
+      $('.main-nav').removeClass('fixed');
+      $('.main-logo').removeClass('fixed');
+       $('header').removeClass('fixed');
+     }
  });
   
   
   
   
-    var showMenu = function (e) {
-        e.stopPropagation();
+    var showMenu = function (event) {
+        event.preventDefault();
+        event.stopPropagation();
 //        e.preventDefault();
         $(this).closest("nav").find("ul.show-nav").slideToggle("slow"); };
     var hideMenu = function () {
