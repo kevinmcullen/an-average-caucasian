@@ -29,7 +29,7 @@ $(document).ready(function () {
     event.preventDefault();
     event.stopPropagation();
     
-    if ($(this).scrollTop()>20)
+    if ($(this).scrollTop()>100)
      {
 /*        $('.main-nav ul').hide();*/
         $('.main-nav').addClass('fixed');
