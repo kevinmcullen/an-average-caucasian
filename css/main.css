@@ -98,6 +98,7 @@ a {
   text-decoration: none;
   color: #ffdd15;
   font-weight: 700;
+  transition: all .2s ease-in;
 }
 
 a:hover {
@@ -115,9 +116,19 @@ HEADER
 ********************************************/
 
 
-header {
+header  {
   background-color: #fff;
+  position: absolute;
 }
+
+/* header * {
+  
+
+  -webkit-transition: all 1s ease-in;
+    -moz-transition: all 1s ease-in;
+    -o-transition: all 1s ease-in;
+    transition: all 1s ease-in;
+}*/
 
 header.fixed {
   height: 4em;
@@ -149,7 +160,7 @@ header > * {
 .main-logo.fixed {
   position: fixed;
   top: 0;
-  left: 0;
+  left: 2%;
   float: left;
   width: 40%;
 /*  max-height: 4em;*/
@@ -164,12 +175,11 @@ header > * {
 
 
 .main-nav {
-  margin: .2em auto .4em;
+  margin: .2em auto 0;
   text-align: center;
 /*  float: right;*/
 /*  display: none; */
   width: 80%;
-  background-color: #ffdd15;
   padding-top: .05em;
   border-radius: .4em;
   
@@ -189,7 +199,7 @@ header > * {
 .main-nav ul li a {
   font-size: 1em;
   padding: .2em;
-  transition: all .1s ease-in;
+  transition: all .2s ease-in;
 }
 
 .main-nav ul li a:hover {
@@ -197,24 +207,32 @@ header > * {
 }
 
 .main-nav.fixed {
-  background-color: #fff;
+/*  background-color: #fff;*/
   position: fixed;
-  top: 0;
-  right: 0;
-  width: 100%;
+  top: 1em;
+  right: 2%;
+  width: 95%;
   border-radius: 0;
   margin: 0 auto;
   padding: 1.2em 0 0;
 /*  right: 10%;*/
 }
 
+.main-nav.fixed.show-nav {
+  right: 0;
+}
+
+
+
 .main-nav.fixed a div {
-  margin: 0 .6em .2em  auto;
+  margin: 0 0 .2em auto;
   
 }
 
 .main-nav.fixed ul {
+  display: none;
   text-align: right;
+  font-size: 1.1em;
 }
 
 
@@ -223,7 +241,7 @@ header > * {
 /*  right: 10%;*/
   background-color: rgba(255, 221, 21, 1);
 /*  background-color: #ffdd15;*/
-/*  margin-bottom: .4em;*/
+  margin-top: .4em;
 /*  width: 100%;*/
   
 }
@@ -247,8 +265,8 @@ a.menu-toggle {
 	border-left: 15px solid transparent;
 	border-right: 15px solid transparent;
 	border-top: 10px solid #000;*/
-  width: 2.5em;
-  height: .25em;
+  width: 1.8em;
+  height: .2em;
   border-radius: .4em;
   margin: 0 auto .2em;
   transition: all .1s ease-in;
@@ -257,8 +275,13 @@ a.menu-toggle {
   
 }
 
-.menu-toggle:hover > div {
-  margin: 0 auto .4em;
+.menu-toggle:hover > div,
+.menu-toggle.fixed > div {
+  margin: 0 auto .3em;
+}
+
+.menu-toggle.rotate > div {
+  transform: translateX(90deg);
 }
 
 /*.toggle-bar:active {
@@ -288,8 +311,10 @@ WRAPPER
 
 .wrapper {
   background-color: #eee;
+/*  margin-top: 10em;*/
 /*  background-color: rgba(255, 221, 21, .1);*/
-  padding-top: 2em;
+  padding-top: 14em;
+  
 }
 
 

@@ -29,16 +29,16 @@ $(document).ready(function () {
     event.preventDefault();
     event.stopPropagation();
     
-    if ($(this).scrollTop()>10)
+    if ($(this).scrollTop()>20)
      {
-        $('.main-nav ul').hide();
+/*        $('.main-nav ul').hide();*/
         $('.main-nav').addClass('fixed');
         $('.main-logo').addClass('fixed');
        $('header').addClass('fixed');
      }
     else
      {
-      $('.main-nav ul').show();
+/*      $('.main-nav ul').show();*/
       $('.main-nav').removeClass('fixed');
       $('.main-logo').removeClass('fixed');
        $('header').removeClass('fixed');
@@ -56,11 +56,14 @@ $(document).ready(function () {
     var hideMenu = function () {
 //        event.stopPropagation();
 //        event.preventDefault();
-        $(this).closest("nav").find("ul.show-nav").slideToggle("slow");        
+        $(this).closest("nav").find("ul.show-nav").slideToggle("slow");       
+    var rotateDrawer =  $('.menu-toggle').addClass('rotate');
     };
 
    // jQuery methods go here...
     $(".main-nav").on("click", ".menu-toggle", showMenu);
+    $(".main-nav").on("click", ".menu-toggle", rotateDrawer);
+    
     
     
 //    $(".main-nav").on("click", ".menu-toggle", hideMenu);    
