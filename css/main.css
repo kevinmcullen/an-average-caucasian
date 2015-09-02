@@ -421,6 +421,13 @@ RESPONSIVE
   .image-members div.member.one {
           background-image: url(../img/alex1.jpg);
   }
+
+  .image-members div.member.one:hover {
+        background-image: url(../img/alex2.jpg);
+}
+  
+  
+  
   .image-members div.member.two {
         background-image: url(../img/carl.jpg);
 }
