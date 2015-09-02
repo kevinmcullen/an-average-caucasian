@@ -32,7 +32,6 @@ BASE STYLES
 
 img {
   max-width: 100%;
-  margin: 0 auto;
 }
 
 div {
@@ -47,7 +46,6 @@ html {
 
 body {
   width: 100%;
-  max-width: 1000px;
   margin: 0 auto;
   background-color: #fff;
 }
@@ -119,6 +117,7 @@ HEADER
 header  {
   background-color: #fff;
   position: absolute;
+  width: 100%;
 }
 
 /* header * {
@@ -143,13 +142,15 @@ header > * {
 }
 
 .main-logo {
-  width: 100%
+  width: 100%;
 /*  float: left;*/
 }
 
-.main-logo img {
-  width: 100%;
+
+header.main-logo img {
+  width: 50%;
   display: inline;
+  margin: 0 auto;
 /*  margin: 0 16.6666666666665%;*/
 }
 
@@ -355,9 +356,114 @@ footer {
 
 
 /********************************************
-BASE STYLES
+RESPONSIVE
 ********************************************/
 
+@media screen and (min-width: 600px) {
+  
+  /********************************************
+  HEADER
+  ********************************************/
+  .main-logo {
+    float: left;
+    width: 50%;
+  }
+  .main-logo img {
+    width: 350px;
+  }
+  .toggle-group {
+    display: none;
+  }
+  .show-nav,
+  .main-nav {
+    float: right;
+    background-color: transparent;
+  }
+  .main-nav {
+    width: 50%;
+    position: relative;
+    top: 80px;
+  }
+  
+  /********************************************
+  MAIN
+  ********************************************/
+  .wrapper {
+    padding: 0;
+  }
+  .container{
+    width: 100%;
+  }
+  
+/*  div.image-members {
+        margin-top: 124px;
+  }*/
+ 
+  .image-members div {
+    float: left;
+    width: 25%;
+    height: 400px;
+    margin-top: 124px;
+    padding: 2em;
+  }
+  
+  .image-members div h4,
+  .image-members div p {
+    display: none;
+  }
+  
+  .image-members div.member{
+    background-size: cover;
+    background-position: center;
+  }
+  
+
+  .image-members div.member.one {
+          background-image: url(../img/alex1.jpg);
+  }
+  .image-members div.member.two {
+        background-image: url(../img/carl.jpg);
+}
+  .image-members div.member.three {
+        background-image: url(../img/placeholder.jpg);
+}
+  .image-members div.member.four {
+        background-image: url(../img/alex1.jpg);
+}
+  
+    .image-members div.member {
+    background-size: cover;
+      background-color: rgba(255, 221, 21, 0);
+      -webkit-transition: all 3s ease-in-out;
+    transition: all .8s ease-in-out;
+  }
+  
+
+  .image-members div.member:hover {
+    background-image: none;
+      background-color: rgba(255, 221, 21, 1);
+
+    color: #333;
+  }
+  
+  .image-members div.member:hover * {
+    display: block;
+  }
+  
+  .wrapper.info {
+    width: 80%;
+  }
+  
+  .wrapper.info {
+     margin-top: 4em;
+  }
+  
+  .info {
+    position: relative;
+  }
+  
+
+}
 
 
 /********************************************

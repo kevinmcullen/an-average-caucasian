@@ -62,8 +62,8 @@ $(document).ready(function () {
 
    // jQuery methods go here...
     $(".main-nav").on("click", ".menu-toggle", showMenu);
-    $(".main-nav").on("click", ".menu-toggle", rotateDrawer);
-    
+/*    $(".main-nav").on("click", ".menu-toggle", rotateDrawer);
+    */
     
     
 //    $(".main-nav").on("click", ".menu-toggle", hideMenu);    
